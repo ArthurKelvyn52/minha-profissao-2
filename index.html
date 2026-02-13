@@ -1,11 +1,186 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Atleta Profissional | Portfólio</title>
+    <style>
+        /* Estilos Gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        /* Cores de Destaque */
+        :root {
+            --primary-color: #eaff00; /* Amarelo Neon/Esportivo */
+            --secondary-color: #252525;
+            --text-gray: #b0b0b0;
+        }
+
+        /* Cabeçalho */
+        header {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            margin-bottom: 10px;
+        }
+
+        header h1 span {
+            color: var(--primary-color);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 600px;
+        }
+
+        /* Seções */
+        section {
+            padding: 80px 10% auto;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+            text-transform: uppercase;
+        }
+
+        /* Grid de Conquistas */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .stat-card {
+            background: var(--secondary-color);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            border: 1px solid var(--primary-color);
+        }
+
+        .stat-card h3 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+        }
+
+        /* Galeria Simples */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            filter: grayscale(50%);
+            transition: 0.5s;
+        }
+
+        .gallery img:hover {
+            filter: grayscale(0%);
+            transform: scale(1.02);
+        }
+
+        /* Rodapé / Contato */
+        footer {
+            background: #000;
+            padding: 50px 10%;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .btn-contact {
+            background: var(--primary-color);
+            color: #000;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            section { padding: 50px 5%; }
+        }
+    </style>
 </head>
 <body>
-    
-</body>
-</html>
+
+    <header>
+        <h1>ATLETA <span>PRO</span></h1>
+        <p>Disciplina, superação e foco constante nos resultados. Transformando suor em conquistas todos os dias.</p>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Olá! Sou um atleta dedicado à busca pela excelência. Minha rotina é pautada por treinos intensos, nutrição de alta performance e uma mentalidade resiliente. Aqui você acompanha minha jornada, competições e resultados no mundo do esporte.</p>
+    </section>
+
+    <section id="conquistas">
+        <h2>Minhas Marcas</h2>
+        <div class="stats-container">
+            <div class="stat-card">
+                <h3>15+</h3>
+                <p>Pódios</p>
+            </div>
+            <div class="stat-card">
+                <h3>08</h3>
+                <p>Anos de Carreira</p>
+            </div>
+            <div class="stat-card">
+                <h3>03</h3>
+                <p>Títulos Nacionais</p>
+            </div>
+            <div class="stat-card">
+                <h3>100%</h3>
+                <p>Dedicação</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria">
+        <h2>Galeria de Treino</h2>
+        <div class="gallery">
+            <img src="
