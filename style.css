@@ -1,4 +1,3 @@
-/* Configurações de Reset */
 * {
     margin: 0;
     padding: 0;
@@ -18,14 +17,12 @@ body {
     background-color: var(--bg-black);
     color: var(--text-light);
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* Header Estilizado */
 header {
-    height: 85vh;
-    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.4)), 
-                url('https://images.unsplash.com/photo-1517438476312-10d79c67750d?auto=format&fit=crop&w=1350&q=80');
+    height: 60vh;
+    background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.6)), 
+                url('https://images.unsplash.com/photo-1504450758481-7338eba7524a?auto=format&fit=crop&w=1350&q=80');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -36,30 +33,15 @@ header {
 }
 
 header h1 {
-    font-size: clamp(2.5rem, 10vw, 5.5rem);
+    font-size: clamp(2.5rem, 8vw, 5rem);
     text-transform: uppercase;
     font-weight: 900;
-    letter-spacing: -2px;
 }
 
-header h1 span {
-    color: var(--primary-red);
-    display: block;
-}
+header h1 span { color: var(--primary-red); }
 
-/* Seções Gerais */
 section {
-    padding: 80px 10%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.dark-section {
-    background-color: #0f0f0f;
-    max-width: 100%;
-}
-
-.container {
+    padding: 60px 10%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -68,25 +50,45 @@ h2 {
     font-size: 2.2rem;
     margin-bottom: 30px;
     text-transform: uppercase;
-    position: relative;
+    color: var(--primary-red);
 }
 
-h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background: var(--primary-red);
-    margin-top: 10px;
+/* ESTILIZAÇÃO DA CAIXA "SOBRE MIM" COM BORDA */
+.perfil-box {
+    border: 2px solid var(--primary-red);
+    padding: 30px;
+    background-color: var(--card-gray);
+    border-radius: 8px;
 }
 
-.description {
-    font-size: 1.1rem;
+.introducao {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+h3 {
+    color: var(--primary-red);
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.pilares {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pilar {
     color: var(--text-dim);
-    max-width: 800px;
+    border-left: 3px solid var(--primary-red);
+    padding-left: 15px;
 }
 
-/* Cards de Estatísticas */
+/* Restante do Estilo */
+.dark-section { background-color: #0f0f0f; max-width: 100%; }
+
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -96,73 +98,28 @@ h2::after {
 .stat-card {
     background: var(--card-gray);
     padding: 40px;
-    border-radius: 4px;
     text-align: center;
-    transition: 0.3s;
+    border-bottom: 3px solid var(--primary-red);
 }
 
-.stat-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(230, 0, 0, 0.2);
-}
+.stat-card h3 { font-size: 2.5rem; color: var(--primary-red); }
 
-.stat-card h3 {
-    font-size: 3.5rem;
-    color: var(--primary-red);
-}
-
-/* Galeria */
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.gallery img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 4px;
-    transition: 0.4s;
-    filter: grayscale(100%);
-}
-
-.gallery img:hover {
-    filter: grayscale(0%);
-    transform: scale(1.02);
-}
-
-/* Footer e Botão */
 footer {
     background: #000;
-    padding: 80px 10%;
+    padding: 60px 10%;
     text-align: center;
+    margin-top: 50px;
 }
 
 .btn-contact {
     background: var(--primary-red);
     color: #fff;
-    padding: 20px 50px;
+    padding: 15px 40px;
     text-decoration: none;
     font-weight: 800;
     text-transform: uppercase;
     display: inline-block;
     margin-top: 20px;
-    transition: 0.3s;
 }
 
-.btn-contact:hover {
-    background: #b30000;
-    letter-spacing: 2px;
-}
-
-.copyright {
-    margin-top: 40px;
-    font-size: 0.8rem;
-    color: #444;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    section { padding: 60px 5%; }
-}
+.copyright { margin-top: 30px; font-size: 0.8rem; color: #444; }
